@@ -53,6 +53,7 @@ function assignData(response) {
     });
 
 
+
     player1 = new Player(name[0], pos[0], team[0], app[0], goals[0], assists[0], gpm[0], ppm[0]);
     player2 = new Player(name[1], pos[1], team[1], app[1], goals[1], assists[1], gpm[1], ppm[1]);
     player3 = new Player(name[2], pos[2], team[2], app[2], goals[2], assists[2], gpm[2], ppm[2]);
@@ -90,19 +91,23 @@ function changeFunc() {
 
     if (selectedValue === "0") {
         console.log(player1.name);
-        showStats(player1)
+        let avatar = "assets/p4916.png"
+        showStats(player1, avatar)
     }
     else if (selectedValue === "1") {
         console.log(player2.name);
-        showStats(player2)
+        let avatar = "assets/p4148.png"
+        showStats(player2, avatar)
     }
     else if (selectedValue === "2") {
         console.log(player3.name);
-        showStats(player3)
+        let avatar = "assets/p2064.png"
+        showStats(player3, avatar)
     }
     else if (selectedValue === "3") {
         console.log(player4.name);
-        showStats(player4)
+        let avatar = "assets/p8983.png"
+        showStats(player4, avatar)
     }
     else {
         console.log("Not working");
@@ -112,8 +117,9 @@ function changeFunc() {
 
 
 
-function showStats(player) {
+function showStats(player, avatar) {
     console.log(player);
+    console.log(avatar);
 
     let playerCard = document.getElementById("stats");
     playerCard.innerHTML = '';
@@ -139,6 +145,11 @@ function showStats(player) {
     playerPPM.innerHTML = '';
 
 
+    let playerImage = document.createElement('img');
+    playerImage.src = avatar;
+    document.getElementById('cardTopImg').appendChild(playerImage);
+
+
     playerName.appendChild(document.createTextNode(player.name));
     playerPos.appendChild(document.createTextNode(position(player.pos)));
     playerTeam.appendChild(document.createTextNode(player.team));
@@ -160,6 +171,7 @@ function showStats(player) {
     // playerCard.appendChild(playerTeam)
     playerCard.appendChild(playerStats)
 }
+
 
 function position(playerPos) {
 
