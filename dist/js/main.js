@@ -45,11 +45,11 @@ function assignData(response) {
     })
 
     let gpm = response.data.players.map(player => {
-        return (player.stats[0].value) / (player.stats[6].value)
+        return Math.round(((player.stats[0].value) / (player.stats[6].value) + Number.EPSILON) * 100) / 100
     })
 
     let ppm = response.data.players.map(player => {
-        return (player.stats[4].value + player.stats[8].value) / player.stats[7].value
+        return Math.round(((player.stats[4].value + player.stats[8].value) / player.stats[7].value + Number.EPSILON) * 100) / 100
     });
 
 
@@ -143,11 +143,11 @@ function showStats(player) {
     playerPos.appendChild(document.createTextNode(position(player.pos)));
     playerTeam.appendChild(document.createTextNode(player.team));
 
-    playerApp.appendChild(document.createTextNode(player.app));
-    playerGoals.appendChild(document.createTextNode(player.goals));
-    playerAssists.appendChild(document.createTextNode(player.assists));
-    playerGPM.appendChild(document.createTextNode(player.gpm));
-    playerPPM.appendChild(document.createTextNode(player.ppm));
+    playerApp.appendChild(document.createTextNode(`Appearences ${player.app}`));
+    playerGoals.appendChild(document.createTextNode(`Goals ${player.goals}`));
+    playerAssists.appendChild(document.createTextNode(`Assists ${player.assists}`));
+    playerGPM.appendChild(document.createTextNode(`Goals per match ${player.gpm}`));
+    playerPPM.appendChild(document.createTextNode(`Passes per minute ${player.ppm}`));
 
     playerStats.appendChild(playerApp)
     playerStats.appendChild(playerGoals)
@@ -157,7 +157,7 @@ function showStats(player) {
 
     playerCard.appendChild(playerName)
     playerCard.appendChild(playerPos)
-    playerCard.appendChild(playerTeam)
+    // playerCard.appendChild(playerTeam)
     playerCard.appendChild(playerStats)
 }
 

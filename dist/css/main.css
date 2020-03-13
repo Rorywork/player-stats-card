@@ -9,8 +9,8 @@ body {
 
 .card {
   margin: 100px 0px 0px 100px;
-  height: 525px;
-  width: 300px; }
+  height: 750px;
+  width: 375px; }
 
 .card-top {
   background-color: #fafafa;
@@ -36,8 +36,21 @@ body {
     background-color: #d2dbdb;
     border-radius: 50%; }
   .card-bottom .card-stats {
-    padding: 50px 10px 10px 10px; }
+    padding: 0px 10px 10px 10px; }
     .card-bottom .card-stats h1 {
-      color: white; }
+      color: white;
+      font-weight: 100;
+      padding: 10px;
+      font-size: 1.6rem; }
     .card-bottom .card-stats h2 {
-      color: white; }
+      color: white;
+      font-weight: 100;
+      font-size: 1.2rem;
+      padding: 10px; }
+    .card-bottom .card-stats li {
+      background-color: #e5ede8;
+      margin-top: 3px;
+      list-style: none;
+      padding: 10px;
+      color: #58315b;
+      font-weight: 900; }

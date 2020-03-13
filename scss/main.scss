@@ -1,5 +1,7 @@
 $primary-color: rgb(250, 250, 250);
 $secondary-color: rgb(236, 0, 80);
+$tertiary-color: rgb(229, 237, 232);
+$stats-text-color: rgb(88, 49, 91);
 
 * {
   margin: 0;
@@ -14,8 +16,8 @@ body {
 
 .card {
   margin: 100px 0px 0px 100px;
-  height: 525px;
-  width: 300px;
+  height: 750px;
+  width: 375px;
 }
 
 .card-top {
@@ -48,13 +50,29 @@ body {
 
 
   & .card-stats {
-    padding: 50px 10px 10px 10px;
+    padding: 0px 10px 10px 10px;
 
     & h1 {
         color: white;
+        font-weight: 100;
+        padding: 10px;
+        font-size: 1.6rem;
     }
     & h2 {
         color: white;
+        font-weight: 100;
+        font-size: 1.2rem;
+        padding: 10px;
+
+    }
+
+    & li {
+        background-color: $tertiary-color;
+        margin-top: 3px;
+        list-style: none;
+        padding: 10px;
+        color: $stats-text-color;
+        font-weight: 900;
     }
 
 
