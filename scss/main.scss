@@ -1,5 +1,75 @@
-$primary-color: red;
+$primary-color: rgb(250, 250, 250);
+$secondary-color: rgb(236, 0, 80);
+
+* {
+  margin: 0;
+  padding: 0;
+}
 
 body {
-    background-color: $primary-color;
+  font-size: 16px;
+  font-family: sans-serif;
+  background-color: black;
+}
+
+.card {
+  margin: 100px 0px 0px 100px;
+  height: 525px;
+  width: 300px;
+}
+
+.card-top {
+  background-color: $primary-color;
+  position: relative;
+  height: 50%;
+  padding: 10px;
+  & .player-list {
+    position: relative;
+    padding: 5px;
+    width: 100%;
+    background-color: rgb(234, 234, 234);
+  }
+}
+
+.card-bottom {
+  background-color: $secondary-color;
+  position: relative;
+  height: 50%;
+
+  & .card-badge {
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    left: 65%;
+    top: -15%;
+    background-color: rgb(210, 219, 219);
+    border-radius: 50%;
+  }
+
+  & .player-heading {
+    color: white;
+    padding: 10px;
+
+    & h1 {
+      font-weight: 100;
+    }
+
+    & p {
+      margin-top: 5px;
+    }
+  }
+
+  & .card-stats {
+    padding: 10px;
+
+    & ul {
+      list-style: none;
+
+      & li {
+        padding: 5px;
+        margin: 3px;
+        background-color: rgb(234, 234, 234);
+      }
+    }
+  }
 }

@@ -1,2 +1,52 @@
+* {
+  margin: 0;
+  padding: 0; }
+
 body {
-  background-color: red; }
+  font-size: 16px;
+  font-family: sans-serif;
+  background-color: black; }
+
+.card {
+  margin: 100px 0px 0px 100px;
+  height: 525px;
+  width: 300px; }
+
+.card-top {
+  background-color: #fafafa;
+  position: relative;
+  height: 50%;
+  padding: 10px; }
+  .card-top .player-list {
+    position: relative;
+    padding: 5px;
+    width: 100%;
+    background-color: #eaeaea; }
+
+.card-bottom {
+  background-color: #ec0050;
+  position: relative;
+  height: 50%; }
+  .card-bottom .card-badge {
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    left: 65%;
+    top: -15%;
+    background-color: #d2dbdb;
+    border-radius: 50%; }
+  .card-bottom .player-heading {
+    color: white;
+    padding: 10px; }
+    .card-bottom .player-heading h1 {
+      font-weight: 100; }
+    .card-bottom .player-heading p {
+      margin-top: 5px; }
+  .card-bottom .card-stats {
+    padding: 10px; }
+    .card-bottom .card-stats ul {
+      list-style: none; }
+      .card-bottom .card-stats ul li {
+        padding: 5px;
+        margin: 3px;
+        background-color: #eaeaea; }
