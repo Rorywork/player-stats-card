@@ -2,9 +2,10 @@
   "name": "player-card",
   "version": "1.0.0",
   "description": "Player Stats Card Task",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/"
+    "sass": "node-sass -w scss/ -o dist/css/",
+    "start": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
