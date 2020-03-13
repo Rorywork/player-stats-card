@@ -111,14 +111,15 @@ function changeFunc() {
 }
 
 
+
 function showStats(player) {
     console.log(player);
 
     let playerCard = document.getElementById("stats");
     playerCard.innerHTML = '';
-    let playerName = document.createElement('p');
+    let playerName = document.createElement('h1');
     playerName.innerHTML = '';
-    let playerPos = document.createElement('p');
+    let playerPos = document.createElement('h2');
     playerPos.innerHTML = '';
     let playerTeam = document.createElement('p');
     playerTeam.innerHTML = '';
@@ -138,11 +139,8 @@ function showStats(player) {
     playerPPM.innerHTML = '';
 
 
-
-
-
     playerName.appendChild(document.createTextNode(player.name));
-    playerPos.appendChild(document.createTextNode(player.pos));
+    playerPos.appendChild(document.createTextNode(position(player.pos)));
     playerTeam.appendChild(document.createTextNode(player.team));
 
     playerApp.appendChild(document.createTextNode(player.app));
@@ -161,6 +159,22 @@ function showStats(player) {
     playerCard.appendChild(playerPos)
     playerCard.appendChild(playerTeam)
     playerCard.appendChild(playerStats)
+}
+
+function position(playerPos) {
+
+    if (playerPos === "D") {
+        return "Defender"
+    }
+    if (playerPos === "M") {
+        return "Midfielder"
+    }
+    if (playerPos === "F") {
+        return "Forward"
+    }
+    else {
+        return "Goalkeeper"
+    }
 }
 
 function renderPlayerList() {

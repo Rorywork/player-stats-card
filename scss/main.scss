@@ -46,30 +46,17 @@ body {
     border-radius: 50%;
   }
 
-  & .player-heading {
-    color: white;
-    padding: 10px;
-
-    & h1 {
-      font-weight: 100;
-    }
-
-    & p {
-      margin-top: 5px;
-    }
-  }
 
   & .card-stats {
-    padding: 10px;
+    padding: 50px 10px 10px 10px;
 
-    & ul {
-      list-style: none;
-
-      & li {
-        padding: 5px;
-        margin: 3px;
-        background-color: rgb(234, 234, 234);
-      }
+    & h1 {
+        color: white;
     }
+    & h2 {
+        color: white;
+    }
+
+
   }
 }
