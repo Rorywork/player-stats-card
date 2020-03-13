@@ -1,0 +1,19 @@
+{
+  "name": "player-card",
+  "version": "1.0.0",
+  "description": "Player Stats Card Task",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "node-sass": "^4.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
