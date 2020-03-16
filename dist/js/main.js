@@ -58,6 +58,7 @@ function assignData(response) {
     player2 = new Player(name[1], pos[1], team[1], app[1], goals[1], assists[1], gpm[1], ppm[1]);
     player3 = new Player(name[2], pos[2], team[2], app[2], goals[2], assists[2], gpm[2], ppm[2]);
     player4 = new Player(name[3], pos[3], team[3], app[3], goals[3], assists[3], gpm[3], ppm[3]);
+    player5 = new Player(name[4], pos[4], team[4], app[4], goals[4], assists[4], gpm[4], ppm[4]);
 
 
 
@@ -65,6 +66,7 @@ function assignData(response) {
     console.log(this.player2);
     console.log(this.player3);
     console.log(this.player4);
+    console.log(this.player5);
 
 }
 
@@ -110,9 +112,15 @@ function changeFunc() {
     }
     else if (selectedValue === "3") {
         console.log(player4.name);
+        let avatar = "assets/p4246.png"
+        let club = "assets/arsenal.png"
+        showStats(player4, avatar, club)
+    }
+    else if (selectedValue === "4") {
+        console.log(player5.name);
         let avatar = "assets/p8983.png"
         let club = "assets/leicester.png"
-        showStats(player4, avatar, club)
+        showStats(player5, avatar, club)
     }
     else {
         console.log("Not working");
@@ -208,7 +216,7 @@ function renderPlayerList() {
     console.log(response.data.players.length);
     len = response.data.players.length
 
-    for (i = 0; i < (len - 1); i++) {
+    for (i = 0; i < (len); i++) {
         let option = document.createElement('option');
         option.innerHTML = `${response.data.players[i].player.name.first} ${response.data.players[i].player.name.last}`
         option.value = i;
