@@ -16,6 +16,7 @@ const getData = async () => {
         "http://localhost:3001/users"
     );
     assignData(response)
+    renderPlayerList()
 }
 
 
