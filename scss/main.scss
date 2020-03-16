@@ -15,7 +15,7 @@ body {
 }
 
 .card {
-  margin: 100px 0px 0px 100px;
+  margin: 50px 0px 0px 50px;
   height: 700px;
   width: 375px;
 }
@@ -27,7 +27,7 @@ body {
   padding: 10px;
   & .player-list {
     position: relative;
-    padding: 10px;
+    padding: 15px;
     width: 100%;
     background-color: rgb(234, 234, 234);
     border: none;
@@ -99,7 +99,8 @@ body {
         list-style: none;
         padding: 10px;
         color: $stats-text-color;
-        font-weight: 500;
+        font-weight: 600;
+        box-shadow: -1px -1px $stats-text-color;
     }
 
 
