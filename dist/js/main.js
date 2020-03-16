@@ -17,6 +17,10 @@ const getData = async () => {
     );
     assignData(response)
     renderPlayerList()
+    let avatar = "assets/p4916.png"
+    let club = "assets/Spurs.png"
+    showStats(player1, avatar, club)
+
 }
 
 
