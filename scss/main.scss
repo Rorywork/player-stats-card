@@ -25,6 +25,7 @@ body {
   position: relative;
   height: 50%;
   padding: 10px;
+
   & .player-list {
     position: relative;
     padding: 15px;
@@ -37,13 +38,13 @@ body {
 
   & .player-container {
     background:
-    radial-gradient(black 3px, transparent 4px),
-    radial-gradient(black 3px, transparent 4px),
-    linear-gradient(#fff 4px, transparent 0),
-    linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
-    linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
-    #fff;
-    background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+      radial-gradient(black 3px, transparent 4px),
+      radial-gradient(black 3px, transparent 4px),
+      linear-gradient(#fff 4px, transparent 0),
+      linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
+      linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
+      #fff;
+    background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
     background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
     position: relative;
     top: 50px;
@@ -80,29 +81,28 @@ body {
     padding: 20px;
 
     & h1 {
-        color: white;
-        font-weight: 100;
-        font-size: 1.6rem;
+      color: white;
+      font-weight: 100;
+      font-size: 1.6rem;
     }
+
     & h2 {
-        color: white;
-        font-weight: 100;
-        font-size: 1.2rem;
-        margin-top: 10px;
-        margin-bottom: 30px;
+      color: white;
+      font-weight: 100;
+      font-size: 1.2rem;
+      margin-top: 10px;
+      margin-bottom: 30px;
 
     }
 
     & li {
-        background-color: $tertiary-color;
-        margin-top: 3px;
-        list-style: none;
-        padding: 10px;
-        color: $stats-text-color;
-        font-weight: 600;
-        box-shadow: -1px -1px $stats-text-color;
+      background-color: $tertiary-color;
+      margin-top: 3px;
+      list-style: none;
+      padding: 10px;
+      color: $stats-text-color;
+      font-weight: 600;
+      box-shadow: -1px -1px $stats-text-color;
     }
-
-
   }
 }
