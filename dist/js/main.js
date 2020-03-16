@@ -16,7 +16,7 @@ class Player {
 // The image and stats for Toby Alderweireld are displayed by default so the user has something to look at before they select a player.
 const getData = async () => {
     response = await axios.get(
-        "http://localhost:3001/users"
+        "https://player-stats-card.herokuapp.com/users"
     );
     assignData(response)
     renderPlayerList()
