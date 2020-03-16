@@ -60,6 +60,7 @@ function assignData(response) {
     player4 = new Player(name[3], pos[3], team[3], app[3], goals[3], assists[3], gpm[3], ppm[3]);
 
 
+
     console.log(this.player1);
     console.log(this.player2);
     console.log(this.player3);
@@ -92,22 +93,26 @@ function changeFunc() {
     if (selectedValue === "0") {
         console.log(player1.name);
         let avatar = "assets/p4916.png"
-        showStats(player1, avatar)
+        let club = "assets/Spurs.png"
+        showStats(player1, avatar, club)
     }
     else if (selectedValue === "1") {
         console.log(player2.name);
         let avatar = "assets/p4148.png"
-        showStats(player2, avatar)
+        let club = "assets/mancity.png"
+        showStats(player2, avatar, club)
     }
     else if (selectedValue === "2") {
         console.log(player3.name);
         let avatar = "assets/p2064.png"
-        showStats(player3, avatar)
+        let club = "assets/manunited.png"
+        showStats(player3, avatar, club)
     }
     else if (selectedValue === "3") {
         console.log(player4.name);
         let avatar = "assets/p8983.png"
-        showStats(player4, avatar)
+        let club = "assets/leicester.png"
+        showStats(player4, avatar, club)
     }
     else {
         console.log("Not working");
@@ -117,7 +122,7 @@ function changeFunc() {
 
 
 
-function showStats(player, avatar) {
+function showStats(player, avatar, club) {
     console.log(player);
     console.log(avatar);
 
@@ -144,10 +149,18 @@ function showStats(player, avatar) {
     let playerPPM = document.createElement('li');
     playerPPM.innerHTML = '';
 
-
     let playerImage = document.createElement('img');
+    let playerContainer = document.getElementById('playerContainer')
+    playerContainer.innerHTML = "";
     playerImage.src = avatar;
-    document.getElementById('cardTopImg').appendChild(playerImage);
+    playerContainer.appendChild(playerImage);
+
+    let teamImage = document.createElement('img');
+    let teamContainer = document.getElementById('teamContainer')
+    teamContainer.innerHTML = '';
+    teamImage.src = club;
+    teamImage.className = "card-img";
+    teamContainer.appendChild(teamImage);
 
 
     playerName.appendChild(document.createTextNode(player.name));
