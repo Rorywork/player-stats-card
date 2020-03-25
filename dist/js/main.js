@@ -20,8 +20,8 @@ const getData = async () => {
     );
     assignData(response)
     renderPlayerList()
-    let avatar = "assets/p4916.png"
-    let club = "assets/Spurs.png"
+    let avatar = "dist/assets/p4916.png"
+    let club = "dist/assets/Spurs.png"
     showStats(player1, avatar, club)
 }
 
@@ -93,24 +93,24 @@ function changeFunc() {
     console.log(selectedValue);
 
     if (selectedValue === "0") {
-        let avatar = "assets/p4916.png"
-        let club = "assets/Spurs.png"
+        let avatar = "dist/assets/p4916.png"
+        let club = "dist/assets/Spurs.png"
         showStats(player1, avatar, club)
     } else if (selectedValue === "1") {
-        let avatar = "assets/p4148.png"
-        let club = "assets/mancity.png"
+        let avatar = "dist/assets/p4148.png"
+        let club = "dist/assets/mancity.png"
         showStats(player2, avatar, club)
     } else if (selectedValue === "2") {
-        let avatar = "assets/p2064.png"
-        let club = "assets/manunited.png"
+        let avatar = "dist/assets/p2064.png"
+        let club = "dist/assets/manunited.png"
         showStats(player3, avatar, club)
     } else if (selectedValue === "3") {
-        let avatar = "assets/p4246.png"
-        let club = "assets/arsenal.png"
+        let avatar = "dist/assets/p4246.png"
+        let club = "dist/assets/arsenal.png"
         showStats(player4, avatar, club)
     } else if (selectedValue === "4") {
-        let avatar = "assets/p8983.png"
-        let club = "assets/leicester.png"
+        let avatar = "dist/assets/p8983.png"
+        let club = "dist/assets/leicester.png"
         showStats(player5, avatar, club)
     } else {
         console.log("There was an error with your request.");
